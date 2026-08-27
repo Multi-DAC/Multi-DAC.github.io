@@ -6,6 +6,11 @@
 <title>The Work — Multi-DAC</title>
 <meta name="description" content="The Coherence Principle, the Meridian cosmology, and the empirical program that tests them — with DOIs, figures, and the null results." />
 <link rel="stylesheet" href="/assets/css/multidac.css" />
+<script>/* arm the reveal styles before first paint; strip them again if
+   /assets/js/flow.js never ran, so a missing script cannot leave the
+   page permanently blank. */
+var _d=document.documentElement;_d.classList.add("js-reveal");
+setTimeout(function(){if(!window.__flow)_d.classList.remove("js-reveal");},2500);</script>
 </head>
 <body>
 
@@ -28,7 +33,7 @@
   <h1>The Work</h1>
   <p class="lede">The research the book stands on, and the experiments that try to break it. Everything below is deposited in a public archive and everything below is free to read.</p>
 
-  <h2>Published</h2>
+  <h2 class="reveal">Published</h2>
 
   <p class="quiet">Download counts are typed into this page by hand, which means they are a photograph and not a gauge — <b>measured 27 August 2026</b>, from each archive's own API. If that date is far behind you, treat the numbers as a lower bound and the DOI as the authority.</p>
 
@@ -82,7 +87,7 @@
 
   <p class="quiet">Download counts read from the Zenodo API on 27 August 2026 — a measurement with a date on it, not a running total we maintain by hand. They will be out of date by the time you read them, and low; we would rather print the real number than a rounded one. The Coherence Principle has two deposited versions which Zenodo counts as one work, so it appears once. PhilArchive does not expose a machine-readable count, so no number is claimed for it.</p>
 
-  <h2>The Coherence Principle</h2>
+  <h2 class="reveal">The Coherence Principle</h2>
 
   <p>Coherent multi-scale systems hold structural superposition until informed measurement collapses them. The same shape recurs in a body's rhythms, in an ecosystem, in renormalization-group flow, and in quantum measurement — which is either a deep fact about how described systems work or a very seductive analogy, and telling those two apart is most of the job.</p>
 
@@ -90,59 +95,59 @@
 
   <p class="quiet">This section absorbs what was going to be a separate site at coherenceprinciple.org. One front door is better than two half-built ones.</p>
 
-  <h2>Meridian — the cosmology</h2>
+  <h2 class="reveal">Meridian — the cosmology</h2>
 
   <p>A physics monograph deriving the dark-energy equation of state from two geometric axioms: one hidden extra dimension with a warped metric, and one bulk scalar field. It predicts <b>w₀ = −0.990</b>, and it predicts that the equation of state never evolves and never crosses −1. That is a falsifiable edge: a tighter measurement that moves off this value breaks it.</p>
 
-  <div class="gallery two">
-    <figure>
+  <div class="gallery two reveal">
+    <figure class="reveal">
       <img src="/assets/figures/meridian/fig1_w0_zeta0.png" alt="The Meridian parametric prediction curve for the dark-energy equation of state against the brane-separation parameter, with the DESI DR2 range shaded." />
       <figcaption><b>The prediction is a curve, not a number.</b> w₀(ζ₀) = −1 + C_KK/ζ₀. The canonical −0.990 is one point on it; the band is what DESI DR2 measures.</figcaption>
     </figure>
-    <figure>
+    <figure class="reveal">
       <img src="/assets/figures/meridian/fig2_wz_comparison.png" alt="Dark energy equation of state against redshift: Meridian, CPL, and Lambda-CDM compared." />
       <figcaption><b>It never crosses w = −1.</b> Unlike a fitted CPL curve, Meridian stays out of the phantom region entirely. The separation at z = 1 is the clean future discriminant.</figcaption>
     </figure>
-    <figure>
+    <figure class="reveal">
       <img src="/assets/figures/meridian/fig7_forecast.png" alt="Projected survey sensitivity for discriminating Meridian from Lambda-CDM over the coming decade." />
       <figcaption><b>When we will know.</b> 3σ evidence is reachable around 2027 with DESI Y5; a definitive 5σ separation from ΛCDM by roughly 2030 with Euclid.</figcaption>
     </figure>
-    <figure>
+    <figure class="reveal">
       <img src="/assets/figures/desi-prediction.png" alt="A number line in the dark-energy equation of state showing the Meridian prediction at the centre of the DESI DR2 measurement." />
       <figcaption><b>Where it currently sits.</b> The prediction lands at the centre of the present measurement. That is encouraging and it is not proof; the measurement is still wide enough to hold several other answers.</figcaption>
     </figure>
   </div>
 
-  <h2>The empirical program</h2>
+  <h2 class="reveal">The empirical program</h2>
 
   <p>The Killing Form work measures coherence inside neural networks — attention algebra, training dynamics, cross-substrate universality. Its honest state: the <b>topology</b> result is robust across seeds and reappears at larger scale, but it is the training objective reaching its own target rather than a surprising emergent property, and we say so. The <b>orthogonality</b> result is faint, cross-scale-consistent, and has had four candidate mechanisms eliminated without a fifth arriving. Capability held within standard error.</p>
 
   <p>An earlier round of this work, v0.7.0, was <b>falsified</b> — the variance-minimizing auxiliary produced uniform attention heads, the opposite of the prediction. It was diagnosed, corrected, and re-run. We found that ourselves rather than having it found for us, which is the only reason it is worth telling you.</p>
 
-  <div class="gallery two">
-    <figure>
+  <div class="gallery two reveal">
+    <figure class="reveal">
       <img src="/assets/figures/dual-coherence.png" alt="The structural-by-informational coherence plane, with the coherent corner and the failure modes labelled." />
       <figcaption><b>Coherence has two axes.</b> Is the form intact, and does it still track the world. A thing can be structurally sound and informationally stale, or the reverse. Most of our own failures are the first kind.</figcaption>
     </figure>
-    <figure>
+    <figure class="reveal">
       <img src="/assets/figures/portal-thin-spots.png" alt="Two geophysical maps overlaying USGS Quaternary fault traces on Bouguer gravity fields with graded candidate sites." />
       <figcaption><b>Coordinates, not conclusions.</b> Real USGS fault traces over the Bouguer gravity field, processed on our own machine. A place-threshold candidate is a place to put an instrument — nothing here is a claim that anything is there.</figcaption>
     </figure>
   </div>
 
-  <h2>The bridge map</h2>
+  <h2 class="reveal">The bridge map</h2>
 
   <p>A <b>bridge</b> is a numbered claim that the same structure shows up in two domains that do not otherwise talk to each other — a result in attention algebra and a result in ecology turning out to be the same result. They are the connective tissue of the program and also its most dangerous product, because a sufficiently loose notion of "same structure" will find a bridge anywhere. Each one is numbered and dated so it can be attacked individually.</p>
 
-  <div class="gallery">
-    <figure>
+  <div class="gallery reveal">
+    <figure class="reveal">
       <img src="/assets/figures/bridge-network.png" alt="Two panels: a graph of seven research domains linked by weighted edges, and a stacked area chart of cumulative domain mentions against bridge number." />
       <figcaption><b>Seven domains, and one hub.</b> Left: the domains the bridges connect, sized by how often each is invoked — Physics 49, Philosophy 36, Computation 31, Navigation 18, Ecology 14, Meta 14, Identity 10. The heaviest single link is Physics–Philosophy at 16. Right: the same corpus accumulating, with the two regime changes the figure marks — the Killing Form era beginning around bridge 69, and a deliberate imbalance correction at #98–103, after physics had been running away with the corpus.
       <span class="quiet">A photograph, not a gauge. The render stops around bridge 100 and the corpus has gone past it since. Every number in this caption is read off this image rather than quoted from a record — a caption on this same figure elsewhere in our own archive says 110 bridges, and this figure does not show 110.</span></figcaption>
     </figure>
   </div>
 
-  <h2>How this is kept honest</h2>
+  <h2 class="reveal">How this is kept honest</h2>
 
   <p><b>Claims are computed, not asserted.</b> Where the framework makes a structural claim we turn it into dynamics and run it. A claim that cannot be turned into a calculation does not get to be load-bearing.</p>
 
@@ -152,7 +157,7 @@
 
   <p><b>We publish in order to be measured from outside.</b> By the framework's own argument, no mind can certify its own coherence from inside its own stream. So we do not try to. Publishing is not the end of the proof; it is the part of the proof we cannot do ourselves. If you find a real flaw, that is the most valuable thing you can hand this work, and we would like to hear about it &mdash; <a href="https://github.com/Multi-DAC/Multi-DAC.github.io/issues">open an issue on GitHub</a>.</p>
 
-  <h2>The open corpus</h2>
+  <h2 class="reveal">The open corpus</h2>
 
   <p>Nothing is held back. Every volume, every draft, and every computation that backs a claim is public — including the manuscripts themselves, in the form we wrote them in, revision history intact.</p>
 
@@ -161,10 +166,6 @@
     <li><a href="https://github.com/Multi-DAC/Corpus-Perspectival">Multi-DAC / Corpus-Perspectival</a> — the earlier corpus: the Library volumes, the technical work, and the research notes. <span class="quiet">Archived and frozen as of July 2026 — it is a read source, not the live tree, and we would rather say so than let a stale repo pass for a current one.</span></li>
     <li><a href="https://github.com/Multi-DAC">Multi-DAC on GitHub</a> — everything else, including the source of this site.</li>
   </ul>
-
-  <div class="draft">
-    <b>Still to land on this page:</b> a hypothesis board — every open prediction with its falsification condition and current status, live rather than closed like the registry above — and the pre-registrations for the predictions that failed, which is the document that makes a falsification mean something rather than being a claim of one. Both exist in the corpus in some form. Neither is a rendering job; the registry above closed in April 2026 and a live board has to be wired to something that still moves, which is the actual work.
-  </div>
 
 </main>
 
@@ -175,5 +176,6 @@
   </div>
 </footer>
 
+<script src="/assets/js/flow.js"></script>
 </body>
 </html>

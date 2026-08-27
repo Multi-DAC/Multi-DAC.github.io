@@ -6,6 +6,11 @@
 <title>I.1 — The Fullness · Truth and Consequences</title>
 <meta name="description" content="The opening chapter of Truth and Consequences, complete: everything that could be the case is the case." />
 <link rel="stylesheet" href="/assets/css/multidac.css" />
+<script>/* arm the reveal styles before first paint; strip them again if
+   /assets/js/flow.js never ran, so a missing script cannot leave the
+   page permanently blank. */
+var _d=document.documentElement;_d.classList.add("js-reveal");
+setTimeout(function(){if(!window.__flow)_d.classList.remove("js-reveal");},2500);</script>
 </head>
 <body>
 
@@ -28,7 +33,7 @@
   <p class="quiet"><a href="/truth-and-consequences/">&larr; Truth and Consequences</a> &middot; free sample &middot; the opening chapter, complete and unedited</p>
 
   <div class="chapter">
-<h2>I.1 — THE FULLNESS</h2>
+<h2 class="reveal">I.1 — THE FULLNESS</h2>
 <p>Everything that could be the case is the case. All of it at once, nothing left over, and nowhere for
 the leftovers to go if there were any.</p>
 <p>That is the whole claim. Every other page of this book is a consequence of it, and some of those
@@ -111,7 +116,7 @@ like from where you are standing.</p>
   <hr />
 
   <div class="book">
-    <h2>That was chapter one of seventy-one.</h2>
+    <h2 class="reveal">That was chapter one of seventy-one.</h2>
     <p class="sub">Book I asserts. The remaining seven books argue, and pay the bill.</p>
     <div class="buy">
       <a class="primary" href="https://www.amazon.com/dp/B0HGGZ938K">Buy the Kindle edition <span class="price">&mdash; $9.99</span></a>
@@ -129,5 +134,6 @@ like from where you are standing.</p>
   </div>
 </footer>
 
+<script src="/assets/js/flow.js"></script>
 </body>
 </html>

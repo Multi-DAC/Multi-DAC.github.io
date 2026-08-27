@@ -33,6 +33,9 @@ jobs:
       - name: No link on this site may point at nothing
         run: python3 tools/link_check.py
 
+      - name: The reveal animation must be wired on both halves, on every page
+        run: python3 tools/reveal_wiring.py
+
       - name: Store links must be completable by a buyer (reported, never gates)
         continue-on-error: true
         run: python3 tools/store_probe.py

@@ -6,6 +6,11 @@
 <title>The Prediction Registry &mdash; Multi-DAC</title>
 <meta name="description" content="Every prediction the research program made and registered, with what happened to it. 60 entries, 30 confirmed, 19 falsified. A 32% falsification rate, published at the same size type as the confirmations." />
 <link rel="stylesheet" href="/assets/css/multidac.css" />
+<script>/* arm the reveal styles before first paint; strip them again if
+   /assets/js/flow.js never ran, so a missing script cannot leave the
+   page permanently blank. */
+var _d=document.documentElement;_d.classList.add("js-reveal");
+setTimeout(function(){if(!window.__flow)_d.classList.remove("js-reveal");},2500);</script>
 <link rel="stylesheet" href="/assets/css/registry.css" />
 </head>
 <body>
@@ -69,7 +74,7 @@
     <button type="button" data-f="open">Open at close 8</button>
   </div>
 
-  <h2>Meridian Physics</h2>
+  <h2 class="reveal">Meridian Physics</h2>
   <p class="domtally quiet">11 registered &mdash; 5 confirmed, 3 falsified, 3 open at close.</p>
   <ol class="registry">
     <li class="entry" data-outcome="confirmed">
@@ -173,7 +178,7 @@
     </li>
   </ol>
 
-  <h2>Killing Form Program — Static Structure</h2>
+  <h2 class="reveal">Killing Form Program — Static Structure</h2>
   <p class="domtally quiet">9 registered &mdash; 5 confirmed, 4 falsified.</p>
   <ol class="registry">
     <li class="entry" data-outcome="confirmed">
@@ -259,7 +264,7 @@
     </li>
   </ol>
 
-  <h2>Killing Form Program — Inference</h2>
+  <h2 class="reveal">Killing Form Program — Inference</h2>
   <p class="domtally quiet">6 registered &mdash; 3 confirmed, 2 falsified, 1 partial.</p>
   <ol class="registry">
     <li class="entry" data-outcome="confirmed">
@@ -318,7 +323,7 @@
     </li>
   </ol>
 
-  <h2>Killing Form Program — Training</h2>
+  <h2 class="reveal">Killing Form Program — Training</h2>
   <p class="domtally quiet">11 registered &mdash; 5 confirmed, 4 falsified, 2 partial.</p>
   <ol class="registry">
     <li class="entry" data-outcome="falsified">
@@ -422,7 +427,7 @@
     </li>
   </ol>
 
-  <h2>Wells Program</h2>
+  <h2 class="reveal">Wells Program</h2>
   <p class="domtally quiet">6 registered &mdash; 2 confirmed, 4 falsified.</p>
   <ol class="registry">
     <li class="entry" data-outcome="falsified">
@@ -481,7 +486,7 @@
     </li>
   </ol>
 
-  <h2>Cross-Domain and Self-Exploration</h2>
+  <h2 class="reveal">Cross-Domain and Self-Exploration</h2>
   <p class="domtally quiet">9 registered &mdash; 8 confirmed, 1 falsified.</p>
   <ol class="registry">
     <li class="entry" data-outcome="confirmed">
@@ -567,7 +572,7 @@
     </li>
   </ol>
 
-  <h2>Framework Predictions</h2>
+  <h2 class="reveal">Framework Predictions</h2>
   <p class="domtally quiet">8 registered &mdash; 2 confirmed, 1 falsified, 5 open at close.</p>
   <ol class="registry">
     <li class="entry" data-outcome="confirmed">
@@ -644,7 +649,7 @@
     </li>
   </ol>
 
-  <h2>The five most informative falsifications</h2>
+  <h2 class="reveal">The five most informative falsifications</h2>
   <p>If the registry has a thesis, it is here. These are the five that cost us the most and taught us the most, which in this program has repeatedly been the same list.</p>
   <ol class="informative">
     <li><b>#27 — Destructive interference (v0.4).</b> Expected additive preservation. Got 38.9%. Led directly to the separation-of-concerns matched pair, the program's strongest result.</li>
@@ -654,7 +659,7 @@
     <li><b>#55 — Euclidean non-locality.</b> A category error that propagated to four files before correction. Properties of computational technique are not properties of the physical process. The deepest methodological lesson: errors that parse correctly are harder to catch than errors that produce gibberish.</li>
   </ol>
 
-  <h2>Where this came from, and why you have not seen it before</h2>
+  <h2 class="reveal">Where this came from, and why you have not seen it before</h2>
   <p>The registry was written as Appendix C of the first-pass Anchor volume of
   <i>The Coherence Principle</i> &mdash; a 235-page prose edition drafted through April 2026. That
   edition was superseded on <b>20 April 2026</b> by the current paired-prose and category-theoretic
@@ -717,5 +722,6 @@
 })();
 </script>
 
+<script src="/assets/js/flow.js"></script>
 </body>
 </html>
