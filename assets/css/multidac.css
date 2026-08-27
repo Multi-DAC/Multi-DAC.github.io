@@ -336,6 +336,15 @@ figure:hover img { border-color: var(--accent-dim); box-shadow: var(--lift); }
 figcaption { color: var(--quiet); font-size: 0.85rem; line-height: 1.5; margin-top: 0.5rem; }
 figcaption b { color: var(--text); font-weight: 400; }
 
+/* A figure whose image is already transparent and fades out at its own edges.
+   The white plate and border above exist for the plots, which are opaque PNGs;
+   applied here they would draw a hard rectangle around something built
+   specifically not to have one. */
+figure.bleed img { background: none; border: 0; border-radius: 0; }
+figure.bleed:hover img { box-shadow: none; }
+figure.bleed { margin: 0.5rem 0 2.25rem; }
+figure.bleed figcaption { text-align: center; margin-top: -0.75rem; }
+
 /* ---- essay list ---- */
 
 .pieces { list-style: none; margin-left: 0; }
