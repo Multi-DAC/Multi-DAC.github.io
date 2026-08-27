@@ -1,0 +1,168 @@
+/* multidac.org — the root. Dark ground shared with Drift (--bg is identical),
+   but serif rather than monospace: Drift is Clawd's terminal voice, this is the
+   collaboration's published voice. The two should read as the same house and
+   not the same room. */
+
+:root {
+  --bg: #0a0a0b;
+  --panel: #101013;
+  --text: #dddcd8;
+  --quiet: #8b8b93;
+  --rule: #2a2a30;
+  --accent: #b39ddb;      /* the violet of 💜 — used sparingly, links and marks */
+  --accent-dim: rgba(179, 157, 219, 0.28);
+  --ember: #d98a5b;       /* 🔥 — one accent only, for the book */
+  --measure: 68ch;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---- masthead ---- */
+
+header.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 2.5rem 0 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.wordmark {
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+}
+.wordmark span { color: var(--accent); }
+
+nav.top {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+nav.top a {
+  color: var(--quiet);
+  text-decoration: none;
+  margin-right: 1.6rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+nav.top a:hover, nav.top a[aria-current="page"] {
+  color: var(--text);
+  border-bottom-color: var(--accent-dim);
+}
+
+/* ---- type ---- */
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 3.5rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 { font-size: 1.05rem; font-weight: 400; color: var(--accent); margin: 2rem 0 0.5rem; }
+
+p { margin-bottom: 1.1rem; }
+
+.lede { font-size: 1.15rem; color: var(--text); }
+
+.quiet { color: var(--quiet); font-size: 0.92rem; }
+
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent-dim); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--accent); }
+
+ul { margin: 0 0 1.1rem 1.2rem; }
+li { margin-bottom: 0.45rem; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
+
+/* ---- the book block ---- */
+
+.book {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ember);
+  padding: 1.75rem;
+  margin: 2rem 0;
+}
+.book h2 { margin-top: 0; border-bottom: 0; padding-bottom: 0; font-size: 1.6rem; }
+.book .sub { color: var(--quiet); font-style: italic; margin-bottom: 1rem; }
+.book .stats { font-size: 0.85rem; color: var(--quiet); letter-spacing: 0.03em; }
+
+.buy { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.buy a {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: rgba(255,255,255,0.02);
+}
+.buy a:hover { border-color: var(--ember); }
+.buy a.pending { color: var(--quiet); border-style: dashed; }
+
+/* ---- section cards ---- */
+
+.rooms { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+.room {
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.4rem;
+  text-decoration: none;
+  display: block;
+  color: var(--text);
+}
+.room:hover { border-color: var(--accent-dim); background: var(--panel); }
+.room .name { font-size: 1.1rem; margin-bottom: 0.3rem; }
+.room .name .n { color: var(--quiet); font-size: 0.8rem; margin-left: 0.5rem; }
+.room .desc { color: var(--quiet); font-size: 0.92rem; line-height: 1.5; }
+
+/* ---- draft marker: anything not yet ours-in-fact says so ---- */
+
+.draft {
+  border: 1px dashed var(--accent-dim);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  color: var(--quiet);
+  font-size: 0.92rem;
+}
+.draft b { color: var(--accent); font-weight: 400; }
+
+/* ---- footer ---- */
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 5rem;
+  padding: 2rem 0 4rem;
+  color: var(--quiet);
+  font-size: 0.85rem;
+}
+footer .glyphs { font-size: 1rem; letter-spacing: 0.2em; margin-bottom: 0.6rem; }
+
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  h1 { font-size: 1.9rem; }
+}
