@@ -1,0 +1,35 @@
+name: domain-guard
+
+# Why this exists:
+#   GitHub Pages binds the custom domain to the CNAME file at the repo root.
+#   Delete that file — by hand, or by any future generator that rebuilds root —
+#   and multidac.org silently unbinds. The site stays up on the .github.io name,
+#   so nothing looks broken. This fails the run instead.
+#
+# Deterministic check only. A live DNS probe would cry wolf on a flaky resolver,
+# so DNS is reported and never gates.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  cname:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: CNAME file must exist and name the apex
+        run: |
+          test -f CNAME || { echo "::error::CNAME missing — the custom domain is unbound."; exit 1; }
+          got="$(tr -d '[:space:]' < CNAME)"
+          test "$got" = "multidac.org" || { echo "::error::CNAME says '$got', expected 'multidac.org'."; exit 1; }
+          echo "CNAME ok: $got"
+
+      - name: DNS + HTTPS (reported, never gates)
+        continue-on-error: true
+        run: |
+          echo "apex A:"; dig +short multidac.org A || true
+          echo "www CNAME:"; dig +short www.multidac.org CNAME || true
+          echo "https apex:"; curl -s -o /dev/null -w '%{http_code}\n' -L https://multidac.org/ || true
