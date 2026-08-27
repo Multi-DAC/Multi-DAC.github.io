@@ -133,6 +133,63 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .buy a.primary:hover { background: rgba(217, 138, 91, 0.20); }
 .buy .price { color: var(--quiet); font-weight: 400; font-size: 0.85em; }
 
+/* ---- the cover ---- */
+
+.cover-row { display: flex; gap: 1.6rem; align-items: flex-start; margin: 1.5rem 0 2rem; }
+.cover-row .cover { flex: 0 0 190px; }
+.cover-row .cover img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--rule);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.55);
+}
+.cover-row .beside { flex: 1 1 auto; }
+.cover-row .beside > *:first-child { margin-top: 0; }
+.book .cover-row { margin-top: 1.25rem; margin-bottom: 0; }
+.book .cover-row .cover { flex: 0 0 130px; }
+@media (max-width: 560px) {
+  .cover-row { display: block; }
+  .cover-row .cover { max-width: 190px; margin-bottom: 1.2rem; }
+}
+
+/* ---- table of contents ---- */
+
+.toc { margin: 1.5rem 0 2rem; }
+.toc .part {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-top: 1px solid var(--rule);
+  padding-top: 0.9rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.toc .part:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li {
+  color: var(--quiet);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0.28rem;
+  display: flex;
+  gap: 0.7rem;
+}
+.toc li .num { color: var(--accent-dim); font-variant-numeric: tabular-nums; flex: 0 0 3.2rem; text-align: right; }
+.toc li .ttl { color: var(--text); font-size: 0.85rem; letter-spacing: 0.045em; }
+
+/* ---- a chapter rendered on the site (the free sample) ---- */
+
+.chapter h2 { border-bottom: 0; padding-bottom: 0; margin-top: 0; font-size: 1.5rem; letter-spacing: 0.02em; }
+.chapter p { margin-bottom: 1.15rem; }
+.chapter strong { font-weight: 600; color: #efeeea; }
+.chapter blockquote {
+  border-left: 2px solid var(--accent-dim);
+  padding-left: 1.1rem;
+  margin: 0 0 1.15rem;
+  color: var(--quiet);
+  font-style: italic;
+}
+
 /* ---- section cards ---- */
 
 .rooms { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
