@@ -27,6 +27,9 @@ jobs:
           test "$got" = "multidac.org" || { echo "::error::CNAME says '$got', expected 'multidac.org'."; exit 1; }
           echo "CNAME ok: $got"
 
+      - name: One product must not be advertised at two prices
+        run: python3 tools/price_parity.py
+
       - name: DNS + HTTPS (reported, never gates)
         continue-on-error: true
         run: |
