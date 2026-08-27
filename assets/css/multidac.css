@@ -151,6 +151,54 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 }
 .draft b { color: var(--accent); font-weight: 400; }
 
+/* ---- publications ---- */
+
+.pubs { margin: 1.5rem 0 1rem; }
+
+.pub {
+  border-top: 1px solid var(--rule);
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2rem 1.5rem;
+  align-items: baseline;
+}
+.pub:last-child { border-bottom: 1px solid var(--rule); }
+.pub .t { font-size: 1.02rem; }
+.pub .m { color: var(--quiet); font-size: 0.85rem; grid-column: 1 / -1; }
+.pub .m a { color: var(--quiet); }
+.pub .n {
+  color: var(--quiet);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: right;
+}
+.pub .n b { color: var(--text); font-weight: 400; font-size: 0.95rem; }
+
+/* ---- figures ---- */
+
+.gallery { display: grid; gap: 2rem; margin: 1.5rem 0 2rem; }
+@media (min-width: 720px) { .gallery.two { grid-template-columns: 1fr 1fr; } }
+
+figure { margin: 0; }
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+figcaption { color: var(--quiet); font-size: 0.85rem; line-height: 1.5; margin-top: 0.5rem; }
+figcaption b { color: var(--text); font-weight: 400; }
+
+/* ---- essay list ---- */
+
+.pieces { list-style: none; margin-left: 0; }
+.pieces li { border-top: 1px solid var(--rule); padding: 0.85rem 0; margin-bottom: 0; }
+.pieces li:last-child { border-bottom: 1px solid var(--rule); }
+.pieces .d { display: block; color: var(--quiet); font-size: 0.88rem; margin-top: 0.15rem; }
+
 /* ---- footer ---- */
 
 footer {
