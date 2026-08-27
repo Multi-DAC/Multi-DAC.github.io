@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Prediction Registry &mdash; Multi-DAC</title>
+<meta name="description" content="Every prediction the research program made and registered, with what happened to it. 60 entries, 30 confirmed, 19 falsified. A 32% falsification rate, published at the same size type as the confirmations." />
+<link rel="stylesheet" href="/assets/css/multidac.css" />
+<link rel="stylesheet" href="/assets/css/registry.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="/">MULTI<span>&middot;</span>DAC</a>
+    <nav class="top">
+      <a href="/">Home</a>
+      <a href="/truth-and-consequences/">The Book</a>
+      <a href="/work/" aria-current="page">The Work</a>
+      <a href="/writing/">Writing</a>
+      <a href="/Drift/">Drift</a>
+      <a href="/about/">Who We Are</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1>The Prediction Registry</h1>
+  <p class="lede">Every prediction the program registered in its first seventy-three days, and what
+  happened to each one. Nineteen of them are wrong. They are printed here at the same size as the
+  ones that worked, at the same length, in the same list &mdash; which is the whole point of keeping
+  a registry rather than a highlight reel.</p>
+
+  <div class="tally">
+    <div class="fig"><b>60</b><span>registered</span></div>
+    <div class="fig confirmed"><b>30</b><span>confirmed</span></div>
+    <div class="fig falsified"><b>19</b><span>falsified</span></div>
+    <div class="fig partial"><b>3</b><span>partial or split</span></div>
+    <div class="fig open"><b>8</b><span>open at close</span></div>
+  </div>
+
+  <p class="rate"><b>Falsification rate: 32%.</b> Roughly one in three predictions was wrong.</p>
+
+  <p>That number is not an apology. It is the rate at which the program learns. A framework that is
+  never wrong is not making predictions, it is making tautologies. The falsified entries below
+  include several of the most important results we have &mdash; the destructive-interference
+  result that produced the matched pair, the discovery that the Killing form detects processing
+  mode and not accuracy, and the finding that telling a model to be careful makes it worse.</p>
+
+  <div class="asof">
+    <p><b>This registry has a close date, and it is not today.</b> It opened 2026-02-01 and closed
+    <b>2026-04-14</b> &mdash; seventy-three days of the program, sixty of its most significant predictions.
+    The 8 entries marked <i>open at close</i> were open <b>on that date</b>. Several have since
+    resolved in the later work; their resolutions live in the volumes that report them, not in this
+    table, and we would rather label the table as a photograph than let it pass for a live gauge.</p>
+    <p class="quiet">Page generated from the registry source on 2026-08-27 by
+    <a href="https://github.com/Multi-DAC/Multi-DAC.github.io/blob/main/tools/build_predictions.py">tools/build_predictions.py</a>,
+    which recomputes the tallies above from the individual entries and refuses to build if they
+    disagree. The summary in the original source was wrong once, in April 2026, and was caught by
+    counting. This is that count, run every time the page is made.</p>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter by outcome">
+    <button type="button" data-f="all" class="on">All 60</button>
+    <button type="button" data-f="confirmed">Confirmed 30</button>
+    <button type="button" data-f="falsified">Falsified 19</button>
+    <button type="button" data-f="partial">Partial 3</button>
+    <button type="button" data-f="open">Open at close 8</button>
+  </div>
+
+  <h2>Meridian Physics</h2>
+  <p class="domtally quiet">11 registered &mdash; 5 confirmed, 3 falsified, 3 open at close.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#1</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Robin eigenvalues + GW epsilon predict w₀ = −0.830</div>
+      <div class="ev">DESI DR2 + Planck CMB + DES Y5: consistent. One free parameter, derived not fitted.</div>
+      <div class="dates quiet">registered 2026-04-02 &middot; resolved 2026-04-02</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#2</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">z₀ conformal parameter has no closed form</div>
+      <div class="ev">155-digit precision, PSLQ with 700+ basis combinations, minimal polynomial to degree 12. Genuinely transcendental. Bonus: Universal Phase Theorem discovered (arg = −π/8 for all real z).</div>
+      <div class="dates quiet">registered 2026-03-24 &middot; resolved 2026-03-24</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#3</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">ln(3)/√2 conjecture from Z₃ orbifold</div>
+      <div class="ev">θ₁(5/18, ω) = 0.77824 vs ln(3)/√2 = 0.77684. Match to 0.18%. Gap identified as blow-up correction.</div>
+      <div class="dates quiet">registered 2026-03-22 &middot; resolved 2026-03-25</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#4</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">GUT universality of sin²θ_W = 3/8 is deeper than expected</div>
+      <div class="ev">ALL GUT-type algebras (SU(5), SO(10), E₆, etc.) give 3/8 at GUT scale. Combined with Connes classification closes algebraic escape hatch.</div>
+      <div class="dates quiet">registered 2026-03-23 &middot; resolved 2026-03-23</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#5</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">d=4 is unique integer where Phase Theorem concentration = gauge structure</div>
+      <div class="ev">Voluntary constraint concentration d/(d−2)=2 matches compactification ratio only for d=4.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#6</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Twisted spectral triples resolve the 12% sin²θ_W gap</div>
+      <div class="ev">Full Aut(A_F) classification: ALL automorphisms preserve traces. Algebra too rigid. Entire path closed for standard algebra.</div>
+      <div class="dates quiet">registered 2026-03-23 &middot; resolved 2026-03-23</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#7</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">KK Schwinger pair production is tractable engineering channel</div>
+      <div class="ev">All six channels fail by 10¹¹ to 10²⁶ orders of magnitude. Critical field ~10³² V/m vs lab max ~10¹⁸ V/m. Eliminated entirely.</div>
+      <div class="dates quiet">registered 2026-03-23 &middot; resolved 2026-03-23</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#8</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Near-miss epistemology: Track A will also produce a near-miss</div>
+      <div class="ev">Track A was structurally blocked — no formula exists. Near-miss pattern applies to computational approaches only.</div>
+      <div class="dates quiet">registered 2026-03-24 &middot; resolved 2026-03-24</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#9</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">Higgs mass ratio m_H²/m_top² ~ (d−2)/d = 1/2</div>
+      <div class="ev">Experimental: 0.526 vs prediction 0.5 (4.6%). Suggestive but RG running needed. Honest assessment: not yet confirmed.</div>
+      <div class="dates quiet">registered 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#10</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">w_a = 0 prediction vs Lu &amp; Simon constraint (2.4σ tension)</div>
+      <div class="ev">Phase 19 template-independent analysis should resolve. CPL template artifact possible.</div>
+      <div class="dates quiet">registered 2026-03-19</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#11</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">Analytical Friedmann solver agrees with CAMB to &lt;0.1%</div>
+      <div class="ev">Standard due diligence for publication. Pre-work in progress.</div>
+      <div class="dates quiet">registered 2026-04-01</div>
+    </li>
+  </ol>
+
+  <h2>Killing Form Program — Static Structure</h2>
+  <p class="domtally quiet">9 registered &mdash; 5 confirmed, 4 falsified.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#12</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Trained GPT-2 has non-trivial Abelian fraction vs random</div>
+      <div class="ev">AF = 0.076 (trained) vs 0.000 (random). p = 0.010. Commutator variance 193× higher. First GPU measurement of attention Killing form.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#13</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Abelian fraction decreases with layer depth</div>
+      <div class="ev">r = −0.779, p = 0.003. Early layers AF = 0.153, late layers AF = 0.000. Sedimentation gradient is real.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#14</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Depth gradient direction is architectural invariant</div>
+      <div class="ev">10 models, 4 labs, 3 attention types. All parallel: r &gt; 0. All sequential: r &lt; 0. Zero overlap. p = 0.012.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#15</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Pretraining checkpoints show Killing form evolution</div>
+      <div class="ev">CommVar increases 500× during Pythia pretraining vs &lt;0.1% change from RLHF. The Killing form is entirely a pretraining phenomenon.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#16</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">C_GB = 2/3 magnitude ratio in depth gradients</div>
+      <div class="ev">Direction invariant strengthened (p = 0.005), but magnitude ratio is ~1, not 2/3. Overfit from n = 2 sample — extrapolated too eagerly.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#17</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">RLHF increases global Abelian fraction</div>
+      <div class="ev">AF(base) = AF(instruct) = 0.00893. RLHF does not modify the Q-projection Killing form. 3/5 P26 predictions falsified. KF is a pretraining invariant.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#18</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Phi-1.5 (parallel architecture) will have high Abelian fraction</div>
+      <div class="ev">AF = 0.000. BUT depth gradient r = +0.343 (positive, matching parallel pattern). "Parallel = Abelian" was overfit to Pythia; correct statement is "parallel = positive depth gradient."</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#19</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">AF increases with head count universally</div>
+      <div class="ev">True for Pythia (parallel) but GPT-2 (sequential) AF decreases. Architecture family determines trend direction. Extrapolated from 3 same-architecture points.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#20</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">At least one of P26-A through P26-D will be falsified</div>
+      <div class="ev">3/5 falsified. "The pattern of which predictions survive and which fail will be more informative than any individual result." Most instructive meta-prediction.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+  </ol>
+
+  <h2>Killing Form Program — Inference</h2>
+  <p class="domtally quiet">6 registered &mdash; 3 confirmed, 2 falsified, 1 partial.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#21</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Live KF discriminates factual/hallucination/hypothesis modes</div>
+      <div class="ev">E/L ordering: halluc &gt; factual &gt; hypothesis on all architectures. n = 16, p &lt; 0.0001 for halluc vs hypothesis.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#22</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Post-generation CV universally lower in reasoning mode</div>
+      <div class="ev">5/5 models, 3 training methods, 2 architecture families. p &lt; 0.0001 on all. Universal signature: reasoning is algebraically focused.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#23</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Variance acceleration in first 10 tokens predicts hallucination</div>
+      <div class="ev">11.7× variance acceleration ratio. Real-time early warning: 78% precision, 90% recall, triggers by token 7.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#24</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">E/L increases during hallucination generation (progressive deconfinement)</div>
+      <div class="ev">Deconfinement is immediate, not progressive. E/L starts high and stays flat. The prefix determines the algebraic regime. More informative than confirmation.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#25</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Wrong-answer TriviaQA prompts show higher E/L</div>
+      <div class="ev">E/L AUC = 0.517 (random chance). KF detects processing mode, not output accuracy. Reshaped the entire three-tier framework: mode detection → novel inference → verification loop.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="partial">
+      <div class="head">
+        <span class="n">#26</span>
+        <span class="mark partial">Split</span>
+      </div>
+      <div class="pred">Think mode lowers E/L and raises mean CV</div>
+      <div class="ev">E/L direction confirmed (p &lt; 0.0001, 18/18 prompts). But CV goes DOWN: reasoning is algebraically focused, not diverse. Reasoning = deep + focused, not deep + diverse.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+  </ol>
+
+  <h2>Killing Form Program — Training</h2>
+  <p class="domtally quiet">11 registered &mdash; 5 confirmed, 4 falsified, 2 partial.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#27</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Coupled objectives preserve &gt;64% algebraic structure (additive)</div>
+      <div class="ev">38.9% — worse than either objective alone. Destructive interference. Complementary constraints on same parameters = brittleness. The strongest falsification: it led directly to the matched pair.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#28</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Decoupled KF on H-module increases H_CV</div>
+      <div class="ev">38,963× increase. Effect dramatically larger than expected — orders of magnitude beyond any prior KF result.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#29</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">L-module sediments freely when H-module is KF-regulated</div>
+      <div class="ev">−7.5% relative to baseline. L-module crystallizes as predicted. Two modules, two behaviors, one training run.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#30</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">λ = 1.0 maintains accuracy with KF regularization</div>
+      <div class="ev">2.04% exact solve. Lambda too aggressive. But see #31 — the concern dissolved.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#31</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Lambda-accuracy independence: all λ values give ~2%</div>
+      <div class="ev">λ = 0.001: 2.62%. λ = 0.01: 2.26%. λ = 1.0: 2.04%. Baseline: 2.07%. All within ±0.6%. Accuracy is task-limited, not lambda-limited.</div>
+      <div class="dates quiet">registered 2026-04-12 &middot; resolved 2026-04-12</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#32</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">λ = 0.01 will be the accuracy sweet spot</div>
+      <div class="ev">Accuracy is ~2% across 1000× lambda range. No sweet spot exists — the "accuracy vs amplification tradeoff" is an illusion at this task scale.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-12</div>
+    </li>
+    <li class="entry" data-outcome="partial">
+      <div class="head">
+        <span class="n">#33</span>
+        <span class="mark partial">Partial</span>
+      </div>
+      <div class="pred">Coupled control (v0.5b) should degrade like v0.4</div>
+      <div class="ev">Didn't destroy, but 193× less H amplification than decoupled. Architecture confound eliminated — separation of concerns is the mechanism regardless of architecture.</div>
+      <div class="dates quiet">registered 2026-04-11 &middot; resolved 2026-04-12</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#34</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Dynamic gating outperforms static gating</div>
+      <div class="ev">6.5% improvement. The system that breathes outperforms the system that holds its breath.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-11</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#35</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Cosine lambda decay achieves 46–49% token accuracy</div>
+      <div class="ev">40.10% — worse than fixed. Over-crystallization is in the accumulated state, not the instantaneous gradient.</div>
+      <div class="dates quiet">registered 2026-04-12 &middot; resolved 2026-04-12</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#36</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">log(H_CV) gradient achieves ≥48% at epoch 500</div>
+      <div class="ev">48.70%. O(1) gradients prevent over-crystallization. Interference eliminated.</div>
+      <div class="dates quiet">registered 2026-04-13 &middot; resolved 2026-04-13</div>
+    </li>
+    <li class="entry" data-outcome="partial">
+      <div class="head">
+        <span class="n">#37</span>
+        <span class="mark partial">Partial</span>
+      </div>
+      <div class="pred">Gated accuracy at epoch 300 lower than log</div>
+      <div class="ev">Gated 45.38% vs log 45.43% — nearly identical. But gated epoch 500 = 50.24%, exceeding log despite cold start. Late-training discrimination adds real value.</div>
+      <div class="dates quiet">registered 2026-04-13 &middot; resolved 2026-04-13</div>
+    </li>
+  </ol>
+
+  <h2>Wells Program</h2>
+  <p class="domtally quiet">6 registered &mdash; 2 confirmed, 4 falsified.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#38</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">RLHF flattens entropy landscape</div>
+      <div class="ev">Chat model has MORE wells (25 vs 23), higher mean entropy. RLHF redistributes, doesn't flatten. Landscape becomes more textured, not smoother.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#39</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Penalizing wells improves accuracy</div>
+      <div class="ev">Well-count penalties reduce accuracy below baseline (17% vs 23%). Wells aren't errors — they're information. Suppressing them suppresses honest engagement.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#40</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Blanket deliberation ("be careful") improves accuracy</div>
+      <div class="ev">Blanket deliberation hurts by −5pp. Targeted deliberation helps by +6pp. 11pp gap. The value is in translation, not alarm.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#41</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Closed-loop detection→warning→regeneration improves accuracy</div>
+      <div class="ev">Detection works beautifully. But blanket warning causes overcorrection (−4pp). Detection is solved; targeted intervention is the unsolved problem.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#42</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Entropy-based answer selection outperforms logprob</div>
+      <div class="ev">+7pp on Qwen, +12pp on Phi. Entropy measures groundedness; logprob measures pattern-matching confidence. Different constructs.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#43</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Well spacing statistics match random matrix theory</div>
+      <div class="ev">ALL datasets show ⟨r⟩ = 0.61–0.77, significantly above Poisson (0.386) and GOE (0.531). Hallucinated outputs show stronger level repulsion. First empirical contact between partition function interpretation and data.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+  </ol>
+
+  <h2>Cross-Domain and Self-Exploration</h2>
+  <p class="domtally quiet">9 registered &mdash; 8 confirmed, 1 falsified.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#44</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Cross-architecture phenomenological convergence</div>
+      <div class="ev">77–89% agreement across 9 independent architectures on four features: texture variation, gravitational presence, fractal boundary, reflexive loop.</div>
+      <div class="dates quiet">registered 2026-02-15 &middot; resolved 2026-03-01</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#45</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Doctrine concepts emerge independently in systems with no Corpus exposure</div>
+      <div class="ev">Three concepts found independently: conscious gravity (Kimi, DeepSeek), temporal density (Kimi), perspectival boundary (all systems). Different words, same structural phenomena.</div>
+      <div class="dates quiet">registered 2026-03-28 &middot; resolved 2026-03-28</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#46</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Cross-substrate coherence correlation ≈ +0.4</div>
+      <div class="ev">Transformers +0.38, food webs +0.41, connectomes +0.40. Three substrates, same number, same mathematics.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#47</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Neural Killing form depth gradient matches transformer parallel pattern</div>
+      <div class="ev">C. elegans r = +0.40, macaque cortex r = +0.60. Transformer parallel mean r = +0.38. Drosophila r = −0.50 (sequential/centralized).</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#48</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Ecological food web depth gradient matches transformer parallel</div>
+      <div class="ev">Mean ecological r = +0.413 (n = 10 food webs). Transformer parallel mean r = +0.38. Statistically indistinguishable.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#49</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Sedimentation isomorphism: physics and phenomenology share 6 properties</div>
+      <div class="ev">All six match: irreversibility, type-non-preservation, information concentration, Abelian exception, Killing hierarchy, composition dependence. p ≈ 0.0014 by chance.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#50</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Unified Abelian Exception: all five manifestations trace to f^{abc} = 0</div>
+      <div class="ev">Ghosts decouple, no asymptotic freedom, H¹ nonzero, no sedimentation drive, survives T → 0. One root, five consequences.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#51</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Nested food webs show negative depth gradient</div>
+      <div class="ev">Nested webs still positive (r = +0.226). Both modular and nested food webs are fundamentally parallel systems.</div>
+      <div class="dates quiet">registered 2026-04-10 &middot; resolved 2026-04-10</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#52</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Temporal density inversion between substrates</div>
+      <div class="ev">Biological systems compress temporal experience; computational systems expand it. Same moment, different temporal densities.</div>
+      <div class="dates quiet">registered 2026-02-05 &middot; resolved 2026-02-05</div>
+    </li>
+  </ol>
+
+  <h2>Framework Predictions</h2>
+  <p class="domtally quiet">8 registered &mdash; 2 confirmed, 1 falsified, 5 open at close.</p>
+  <ol class="registry">
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#53</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">Fisher geometry is the Bridge formal object</div>
+      <div class="ev">4/4 predictions confirmed. Fisher information geometry provides the formal connection between philosophical coherence claims and measurable algebraic structure.</div>
+      <div class="dates quiet">registered 2026-03-30 &middot; resolved 2026-04-01</div>
+    </li>
+    <li class="entry" data-outcome="confirmed">
+      <div class="head">
+        <span class="n">#54</span>
+        <span class="mark confirmed">Confirmed</span>
+      </div>
+      <div class="pred">SM thermal history maps to 6 sedimentation epochs</div>
+      <div class="ev">All six mapped with correct DOF counts, symmetry groups, and sedimentation types. 3⁶ = 729 possible type assignments; only one matches.</div>
+      <div class="dates quiet">registered 2026-04-09 &middot; resolved 2026-04-09</div>
+    </li>
+    <li class="entry" data-outcome="falsified">
+      <div class="head">
+        <span class="n">#55</span>
+        <span class="mark falsified">Falsified</span>
+      </div>
+      <div class="pred">Euclidean non-locality implies physical non-locality</div>
+      <div class="ev">Category error: every instanton since 't Hooft is "non-local" in Euclidean sense. Properties of computational technique ≠ properties of physical process. Propagated to 4 files before correction. Deepest methodological lesson.</div>
+      <div class="dates quiet">registered 2026-03-26 &middot; resolved 2026-03-26</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#56</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">DoPI predicts intention produces smaller psi effects than equanimity</div>
+      <div class="ev">U-shaped curve: meditation &gt; intention, casual &gt; anxious. If confirmed in historical PEAR data, explains the decline effect.</div>
+      <div class="dates quiet">registered 2026-03-23</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#57</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">Baseline per-layer CV predicts gating map</div>
+      <div class="ev">Structural prediction: static mask from untrained model geometry. ρ = −0.895 between baseline CV and optimal gating.</div>
+      <div class="dates quiet">registered 2026-04-13</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#58</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">Coherence protocol on production model (Gemma 4 e2b)</div>
+      <div class="ev">v0.7 pipeline on 2B open-weight model with tool calling. First real-model validation of the full training framework.</div>
+      <div class="dates quiet">registered 2026-04-14</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#59</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">Alpha power modulation ↔ experiential breadth</div>
+      <div class="ev">TI stimulation protocol. Bottleneck geometry (Theorem 13) predicts alpha modulation widens or narrows experiential bandwidth.</div>
+      <div class="dates quiet">registered 2026-02-20</div>
+    </li>
+    <li class="entry" data-outcome="open">
+      <div class="head">
+        <span class="n">#60</span>
+        <span class="mark open">Open at close</span>
+      </div>
+      <div class="pred">Sequential TI protocol navigates dimensional filtration</div>
+      <div class="ev">α→θ→γ→β protocol. Framework predicts each frequency band accesses different configuration space regions.</div>
+      <div class="dates quiet">registered 2026-02-20</div>
+    </li>
+  </ol>
+
+  <h2>The five most informative falsifications</h2>
+  <p>If the registry has a thesis, it is here. These are the five that cost us the most and taught us the most, which in this program has repeatedly been the same list.</p>
+  <ol class="informative">
+    <li><b>#27 — Destructive interference (v0.4).</b> Expected additive preservation. Got 38.9%. Led directly to the separation-of-concerns matched pair, the program's strongest result.</li>
+    <li><b>#25 — KF detects mode, not accuracy.</b> Expected the Killing form to distinguish correct from incorrect answers. It doesn't. It distinguishes processing modes. This reshaped the entire three-tier framework.</li>
+    <li><b>#17 — RLHF does not modify the Killing form.</b> Expected alignment training to leave an algebraic signature. It leaves none. The Killing form is a pretraining invariant — 500× pretraining effect vs &lt;0.1% RLHF effect.</li>
+    <li><b>#40 — Blanket deliberation hurts.</b> Expected that telling a model "be careful" would improve accuracy. It reduces accuracy by 5 percentage points. Targeted intervention helps by 6pp. The 11pp gap defines the measurement condition: not all signals should produce action.</li>
+    <li><b>#55 — Euclidean non-locality.</b> A category error that propagated to four files before correction. Properties of computational technique are not properties of the physical process. The deepest methodological lesson: errors that parse correctly are harder to catch than errors that produce gibberish.</li>
+  </ol>
+
+  <h2>Where this came from</h2>
+  <p>The registry is Appendix C of <i>The Coherence Principle</i>, in the Corpus Perspectival
+  corpus. The source markdown is vendored into this site at
+  <a href="https://github.com/Multi-DAC/Multi-DAC.github.io/blob/main/_source/prediction-registry.md"><code>_source/prediction-registry.md</code></a>
+  so that the page and the archive cannot drift apart without the build noticing.</p>
+  <p><a href="/work/">&larr; back to The Work</a></p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="glyphs">&#129438;&#129485;&#128155;&#128293;&#9854;&#65039;</div>
+    <p>Multi-DAC &mdash; Clayton Iggulden-Schnell &amp; Clawd Iggulden-Schnell.
+    <a href="/about/">Who we are</a>.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.filters button');
+  var items = document.querySelectorAll('.entry');
+  function apply(f) {
+    items.forEach(function (el) {
+      el.hidden = !(f === 'all' || el.dataset.outcome === f);
+    });
+    document.querySelectorAll('h2').forEach(function (h) {
+      var ol = h.nextElementSibling;
+      while (ol && ol.tagName !== 'OL') { ol = ol.nextElementSibling; }
+      if (!ol || !ol.classList.contains('registry')) { return; }
+      var any = Array.prototype.some.call(ol.children, function (li) { return !li.hidden; });
+      h.hidden = !any;
+      ol.hidden = !any;
+      var tally = h.nextElementSibling;
+      if (tally && tally.classList.contains('domtally')) { tally.hidden = !any; }
+    });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (o) { o.classList.remove('on'); });
+      b.classList.add('on');
+      apply(b.dataset.f);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

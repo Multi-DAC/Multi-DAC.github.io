@@ -1,0 +1,137 @@
+/* registry.css — the prediction registry.
+   Loaded only by /work/predictions/.
+
+   THE ONE RULE THIS FILE EXISTS TO ENFORCE: a falsified entry and a confirmed entry
+   are rendered identically. Same font, same size, same weight, same line-height, same
+   width, same order in the list. The outcome mark differs in COLOUR and in nothing
+   else. The work page promises "nulls are published at the same size type as the
+   confirmations", and a stylesheet is where that promise is either kept or quietly
+   broken -- it is very easy to write a page that says the right thing in prose and
+   then sets the failures in 0.85rem grey. If you edit this file, do not give
+   .entry[data-outcome] any rule that changes size, weight or spacing. */
+
+:root {
+  --confirmed: #8fbf9f;
+  --falsified: #d98a5b;
+  --partial:   #b39ddb;
+}
+
+/* ---- the tally ---- */
+
+.tally {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2.2rem;
+  margin: 2rem 0 1.2rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.tally .fig { display: flex; flex-direction: column; }
+.tally .fig b {
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.tally .fig span {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  margin-top: 0.2rem;
+}
+.tally .confirmed b { color: var(--confirmed); }
+.tally .falsified b { color: var(--falsified); }
+.tally .partial   b { color: var(--partial); }
+.tally .open      b { color: var(--quiet); }
+
+.rate { font-size: 1.05rem; }
+
+/* ---- the as-of block: a date, not a stamp ---- */
+
+.asof {
+  border-left: 2px solid var(--accent-dim);
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  margin: 2rem 0;
+}
+.asof p { margin-bottom: 0.8rem; }
+.asof p:last-child { margin-bottom: 0; }
+
+/* ---- filters ---- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2.5rem 0 1rem;
+}
+.filters button {
+  font: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  color: var(--quiet);
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+}
+.filters button:hover { color: var(--text); border-color: var(--accent-dim); }
+.filters button.on {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(179, 157, 219, 0.08);
+}
+
+/* ---- the entries ----
+   Note what is NOT here: no per-outcome typography. */
+
+.domtally { margin: -0.4rem 0 1.2rem; }
+
+ol.registry { list-style: none; margin: 0 0 1rem; padding: 0; }
+
+.entry {
+  border-top: 1px solid var(--rule);
+  padding: 1.1rem 0;
+  margin: 0;
+}
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.entry .head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.35rem;
+}
+.entry .n {
+  color: var(--accent-dim);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+}
+.entry .mark {
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  padding: 0.1rem 0.5rem;
+  white-space: nowrap;
+}
+.mark.confirmed { color: var(--confirmed); }
+.mark.falsified { color: var(--falsified); }
+.mark.partial   { color: var(--partial); }
+.mark.open      { color: var(--quiet); }
+
+.entry .pred { margin-bottom: 0.4rem; }
+.entry .ev { color: var(--quiet); }
+.entry .ev b { color: var(--text); font-weight: 400; }
+.entry .dates { font-size: 0.8rem; margin-top: 0.4rem; }
+
+ol.informative { margin: 1.2rem 0 1.1rem 1.4rem; }
+ol.informative li { margin-bottom: 0.8rem; }
+
+code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 0.9em; }
+
+@media (max-width: 560px) {
+  .tally { gap: 0.5rem 1.4rem; }
+  .tally .fig b { font-size: 1.4rem; }
+}
