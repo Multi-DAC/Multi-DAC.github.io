@@ -30,6 +30,9 @@ jobs:
       - name: One product must not be advertised at two prices
         run: python3 tools/price_parity.py
 
+      - name: No link on this site may point at nothing
+        run: python3 tools/link_check.py
+
       - name: DNS + HTTPS (reported, never gates)
         continue-on-error: true
         run: |
