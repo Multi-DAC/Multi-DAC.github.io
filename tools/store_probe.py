@@ -36,6 +36,15 @@ handed back is not the page you asked for. So a URL must now show its own
 product title before any verdict is issued; if it does not, the result is
 NO VERDICT, which is a distinct outcome from a pass.
 
+The Payhip account was connected to Stripe later the same day, and that fix is
+what exposed the next weakness: a denylist can only ever report "no failure I
+already know about". Where a host states the good case in its own words —
+Payhip emits `hasConnectedPaymentProvider` as true or false, not only on
+failure — the true value is now REQUIRED (see REQUIRED_POSITIVE). If the field
+moves or vanishes the result is NO VERDICT, not a pass. Both arms are exercised
+by mutating a captured page: flag→false must report BLOCKED, flag removed must
+report NO VERDICT.
+
 NEVER GATES. Same reasoning as the DNS step in domain-guard: an outbound
 network check that fails the build on a flaky third party trains you to ignore
 red. It prints, and CI keeps going.
@@ -57,6 +66,17 @@ STORE_HOSTS = ("payhip.com", "gumroad.com", "amazon.com")
 # A response must carry this before any verdict is issued. Without it we were
 # handed a bot wall, an interstitial, or an error skin — not the listing.
 PRODUCT_MARKER = r"Truth and Consequences"
+
+# Where a host publishes a POSITIVE statement that it can take money, require
+# it. This is the difference between "I found no failure I know about" and "the
+# store said, in its own words, that it is able to charge a card". Payhip emits
+# the flag either way, so the true case is checkable and absence is meaningful.
+# A host with no entry here still falls back to the denylist below, which is
+# weaker on purpose — the weakness is stated in the output, not hidden.
+REQUIRED_POSITIVE = {
+    "payhip.com": (r'"hasConnectedPaymentProvider"\s*:\s*true',
+                   "Payhip reports a connected payment provider"),
+}
 
 # (regex, what it means). Case-insensitive, matched against the fetched body.
 BLOCKERS = [
@@ -126,9 +146,22 @@ def main():
             for why in found:
                 print(f"     BLOCKED: {why}")
             print(f"     linked from: {', '.join(sorted(set(pages)))}")
-        else:
+            continue
+
+        want = next((v for h, v in REQUIRED_POSITIVE.items() if h in url), None)
+        if want is None:
             print(f"  ok {url}  (HTTP {status}, product page confirmed, "
-                  f"no known blocker)")
+                  f"no known blocker — denylist only, not proof of sale)")
+        elif re.search(want[0], body, re.I):
+            print(f"  OK {url}  (HTTP {status}, product page confirmed, "
+                  f"{want[1]})")
+        else:
+            silent += 1
+            print(f"  ?  {url}")
+            print(f"     NO VERDICT — HTTP {status}, product page confirmed, "
+                  f"no known blocker, but the positive marker "
+                  f"({want[1]}) is ABSENT. Either the store cannot charge or "
+                  f"the field moved. Absence of the failure is not a pass.")
 
     if hits:
         print(f"\nstore-probe: {hits} store link(s) a buyer cannot complete. "
