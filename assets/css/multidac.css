@@ -124,6 +124,14 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 }
 .buy a:hover { border-color: var(--ember); }
 .buy a.pending { color: var(--quiet); border-style: dashed; }
+.buy a.primary {
+  border-color: var(--ember);
+  background: rgba(217, 138, 91, 0.10);
+  color: #f0d9c8;
+  font-weight: 600;
+}
+.buy a.primary:hover { background: rgba(217, 138, 91, 0.20); }
+.buy .price { color: var(--quiet); font-weight: 400; font-size: 0.85em; }
 
 /* ---- section cards ---- */
 
