@@ -23,6 +23,11 @@
 
 html { scroll-behavior: smooth; }
 
+/* The hero art is wider than the viewport by design (1500px, centred off-axis);
+   without this the overhang creates a real horizontal scrollbar on every
+   desktop width. `clip` rather than `hidden` so no scroll container is made. */
+html, body { overflow-x: clip; }
+
 ::selection { background: var(--accent-dim); color: #fff; }
 
 :focus-visible {
